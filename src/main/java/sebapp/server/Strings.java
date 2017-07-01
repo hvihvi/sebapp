@@ -1,4 +1,4 @@
-package extremecarpaccio;
+package sebapp.server;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

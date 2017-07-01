@@ -1,4 +1,4 @@
-package extremecarpaccio;
+package sebapp.server;
 
 import org.junit.Rule;
 import org.junit.Test;
@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import static extremecarpaccio.Strings.stringify;
+import static sebapp.server.Strings.stringify;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class HttpServerTest {

@@ -1,4 +1,4 @@
-package extremecarpaccio;
+package sebapp.server;
 
 import com.google.gson.Gson;
 import spark.ResponseTransformer;
