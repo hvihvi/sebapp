@@ -1,15 +1,15 @@
 package sebapp.server;
 
-import org.junit.Rule;
-import org.junit.Test;
+import static org.assertj.core.api.Assertions.assertThat;
+import static sebapp.server.Strings.stringify;
 
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import static sebapp.server.Strings.stringify;
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.Rule;
+import org.junit.Test;
 
 public class HttpServerTest {
 
@@ -20,7 +20,9 @@ public class HttpServerTest {
 
     @Test
     public void should_respond_pong_on_get_ping() throws IOException {
-        assertThat(get("/ping")).isEqualTo("pong");
+        assertThat(get("/articles")).isEqualTo("[{\"id\":1,\"title\":\"Voyage trop bien\",\"content\":\"blabla " +
+                        "voyage trop bien content\"},{\"id\":2,\"title\":\"Voyage moins bien\",\"content\":\"blabla " +
+                        "voyage moins bien content\"}]");
     }
 
     protected String get(String path) throws IOException {
